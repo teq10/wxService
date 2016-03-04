@@ -99,7 +99,7 @@ class WeixinHandler(tornado.web.RequestHandler):
             #code = respond.get('code')
            # text = respond.encode('utf-8')
             #url = respond.get('url').encode('utf-8')
-            url = "http://166.111.180.137:8080/Smart_Service_Platform/SearchResultOnly.jsp?SearService=%s" % (keyword)
+            url = "http://166.111.180.137:8080/Smart_Service_Platform/SearchResultOnly_WeiXinWeb.jsp?SearService=%s" % (keyword)
 
             info =respond + "\n\n"+"<a href='"+url+"'>查看更多</a>"
 	        #print info
