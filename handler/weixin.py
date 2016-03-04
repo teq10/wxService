@@ -88,12 +88,22 @@ class WeixinHandler(tornado.web.RequestHandler):
             weixinid = msg['FromUserName']
             keyword = msg['Content'].strip().encode('utf-8')
             #图灵机器人
-            url = "http://www.tuling123.com/openapi/api?key=c676b2dd0e54d0612fd37c47fa8c1e5d&info=%s&userid=%s" % (keyword, weixinid)
+            #url = "http://www.tuling123.com/openapi/api?key=c676b2dd0e54d0612fd37c47fa8c1e5d&info=%s&userid=%s" % (keyword, weixinid)
+            url = "http://166.111.180.137:8080/Smart_Service_Platform/SearchResultOnly_WeiXin.jsp?SearService=%s" %(keyword)
             #print url
             respond = requests.get(url)
-            respond=json.loads(respond.content)
+            #respond=json.loads(respond.content)
             #print respond
-            code = respond.get('code')
+            #code = respond.get('code')
+            text = respond.encode('utf-8')
+            #url = respond.get('url').encode('utf-8')
+            info = text+"\n\n"
+            return info
+        except Exception, e:
+            #print e
+            pass
+
+            '''
 
             if code == 100000:
                 return respond.get('text').encode('utf-8')
@@ -134,9 +144,9 @@ class WeixinHandler(tornado.web.RequestHandler):
                 return info
 
             else:
-                return "error"
-        except Exception, e:
-            #print e
+                    return "error"
+         '''
+
 	    pass
     def post_image(self, msg):#图片消息
         self.write("这是一个图片")
