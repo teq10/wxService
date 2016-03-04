@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="28cd1a14-c332-47af-94a5-500bd5aa6aa0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/handler/weixin.py" afterPath="$PROJECT_DIR$/handler/weixin.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wxService.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,8 +32,8 @@
       <file leaf-file-name="weixin.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/handler/weixin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4642857" vertical-offset="1260" max-vertical-offset="4440">
-              <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.5714286" vertical-offset="1275" max-vertical-offset="4545">
+              <caret line="101" column="54" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
               <folding>
                 <element signature="e#24#35#0" expanded="true" />
               </folding>
@@ -470,8 +471,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/handler/weixin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4642857" vertical-offset="1260" max-vertical-offset="4440">
-          <caret line="97" column="35" selection-start-line="97" selection-start-column="35" selection-end-line="97" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.5714286" vertical-offset="1275" max-vertical-offset="4545">
+          <caret line="101" column="54" selection-start-line="101" selection-start-column="54" selection-end-line="101" selection-end-column="54" />
           <folding>
             <element signature="e#24#35#0" expanded="true" />
           </folding>
