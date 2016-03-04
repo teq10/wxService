@@ -95,7 +95,7 @@ class WeixinHandler(tornado.web.RequestHandler):
             #respond=json.loads(respond.content)
             #print respond
             #code = respond.get('code')
-            text = respond.encode('utf-8')
+            text = respond.content.encode('utf-8')
             #url = respond.get('url').encode('utf-8')
             info = text+"\n\n"
             return info
