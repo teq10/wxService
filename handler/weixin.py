@@ -89,15 +89,20 @@ class WeixinHandler(tornado.web.RequestHandler):
             keyword = msg['Content'].strip().encode('utf-8')
             #图灵机器人
             #url = "http://www.tuling123.com/openapi/api?key=c676b2dd0e54d0612fd37c47fa8c1e5d&info=%s&userid=%s" % (keyword, weixinid)
-            url = "http://166.111.180.137:8080/Smart_Service_Platform/SearchResultOnly_WeiXin.jsp?SearService=%s" %(keyword)
-            #print url
+            print keyword
+	    url = "http://166.111.180.137:8080/Smart_Service_Platform/SearchResultOnly.jsp?SearService=%s" % (keyword) 
+            print url
             respond = requests.get(url)
             #respond=json.loads(respond.content)
-            #print respond
+            #print respond.content
+	    respond = respond.content
             #code = respond.get('code')
-            text = respond.content.encode('utf-8')
+           # text = respond.encode('utf-8')
             #url = respond.get('url').encode('utf-8')
-            info = text+"\n\n"
+            info ="<a href='"+url+"'>check</a>"
+	    print info 
+	    print "hehe"
+	   # info = text+"\n\n"
             return info
         except Exception, e:
             #print e
