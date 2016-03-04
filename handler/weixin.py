@@ -270,11 +270,11 @@ class WeixinHandler(tornado.web.RequestHandler):
         return info
 
     def rep_default(self, msg):
-        return self.rep_text(msg, '和我机灵小玩子一起玩！\n\n我是你的生活小助手，看新闻，查列车航班，查天气...\n\n快递，电话归属地，菜谱..\n\n最主要的是和我聊天啊，我会讲笑话')
+        return self.rep_text(msg, '您好！欢迎关注智能旅游服务平台，目前平台仅支持北京3～5日游旅游线路设计，如不明确规定旅游天数，将按照5日游设计线路。欢迎向我提问啦～（回复示例：“打算去北京玩4天，想吃全聚德”、“北京五日游线路推荐，想去八达岭长城”）')
 
 
     def rep_follow(self, msg):
-        return self.rep_text(msg, '和我机灵小玩子一起玩! \n\n我是你的生活小助手，看新闻，查列车航班，查天气...\n\n快递，电话归属地，菜谱..\n\n最主要的是和我聊天啊，我会讲笑话')
+        return self.rep_text(msg, '和您好！欢迎关注智能旅游服务平台，目前平台仅支持北京3～5日游旅游线路设计，如不明确规定旅游天数，将按照5日游设计线路。欢迎向我提问啦～（回复示例：“打算去北京玩4天，想吃全聚德”、“北京五日游线路推荐，想去八达岭长城”）')
     def rep_unfollow(self, msg):
         return self.rep_text(msg,'byebye,你不要我了，5555')
 
