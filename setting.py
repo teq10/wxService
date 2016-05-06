@@ -1,7 +1,7 @@
 import os
 from tornado.options import define, options
 
-define("port", default=8001, help="run on the given port", type=int)
+define("port", default=9001, help="run on the given port", type=int)
 
 settings = {}
 settings['token'] = "0cf21ca674ee11e3987122000afa135c"
