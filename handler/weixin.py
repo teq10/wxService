@@ -1,24 +1,24 @@
 # -*- coding: utf-8 -*-
-import json
+
 import sys
 import xml.etree.ElementTree as ET
 from hashlib import sha1
-import time
-import requests
-import tornado
+
 import hashlib
 from tornado.httpclient import AsyncHTTPClient, HTTPRequest
-
+from base import *
 from setting import settings
 import logging
 
-class WeixinHandler(tornado.web.RequestHandler):
+
+
+class WeixinHandler(BaseHandler):
 
     def check_xsrf_cookie(self):
         return True
 
-    def get(self):
-	#print '1'
+    def get_default(self):
+
         echostr = self.get_argument('echostr', '')
         if echostr and self.verification():
             # sanitize xss filter
@@ -35,7 +35,7 @@ class WeixinHandler(tornado.web.RequestHandler):
 
         return None
 
-    def post(self):
+    def post_default(self):
         msg = self.get_msg()
         #print msg
         try:

@@ -2,5 +2,6 @@
 
 routes = [
     (r"/", "handler.weixin.WeixinHandler"),
+    (r"/menu", "handler.weixinmenu.WeixinMenuHandler"),
     (r"/test","handler.test.test")
 ]
