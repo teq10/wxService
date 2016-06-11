@@ -11,12 +11,12 @@ class WxOauthHandler(BaseHandler):
 
     """
 
-    def authorize(self):
+    def get_authorize(self):
         """
         微信授权
         :return:
         """
-        redirect_uri = "/oauth/wx/callback"
+        redirect_uri = "/oauth?m=callback"
         self.api_authorize = Const.WXAPI_AUTHORIZE.format(APPID=Const.WXAPP,
                                                           REDIRECT_URI=redirect_uri,
                                                           SCOPE="snsapi_userinfo",
@@ -50,7 +50,7 @@ class WxOauthHandler(BaseHandler):
         return wxuser
 
 
-    def callback(self):
+    def get_callback(self):
         """
         微信授权回调地址
 
