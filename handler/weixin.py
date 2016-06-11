@@ -79,7 +79,10 @@ class WeixinHandler(BaseHandler):
 
     def event_LOCATION(self, msg):
         # Need log to record location information of users
-        pass
+        weixinid = msg['FromUserName']
+        Latitude = msg['Latitude']
+        Longitude = msg['Longitude']
+        return "success"
 
 
 #
