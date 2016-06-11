@@ -33,7 +33,7 @@ class WxOauthHandler(BaseHandler):
         """
         token = {}
         if code:
-            token = json.loads(requests.get(self.api_wxuser_access_token.format(APPID=Const.WXAPP, SECRET=Const.WXAPP_SECRET, CODE=code)).content)
+            token = json.loads(requests.get(Const.WXAPI_WXUSER_ACCESS_TOKEN.format(APPID=Const.WXAPP, SECRET=Const.WXAPP_SECRET, CODE=code)).content)
         else:
             print "code is None"
         return token
